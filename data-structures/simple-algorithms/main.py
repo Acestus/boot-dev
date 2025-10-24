@@ -1,0 +1,2 @@
+def summed(nums):
+    pass
