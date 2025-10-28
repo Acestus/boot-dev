@@ -1,22 +1,21 @@
 from main import *
 
-run_cases = [(2, 2), (3, 6), (5, 120)]
+run_cases = [([7, 4, 3, 100, 2343243, 343434, 1, 2, 32], 2343243), ([12, 12, 12], 12)]
 
 submit_cases = run_cases + [
-    (1, 1),
-    (6, 720),
-    (7, 5040),
-    (8, 40320),
-    (9, 362880),
-    (11, 39916800),
+    ([10, 200, 3000, 5000, 4], 5000),
+    ([0], 0),
+    ([-1, -2, -3], -1),
+    ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10),
+    ([10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 10),
 ]
 
 
 def test(input1, expected_output):
     print("---------------------------------")
     print(f"Inputs:")
-    print(f" * num_posts: {input1}")
-    result = num_possible_orders(input1)
+    print(f" * nums: {input1}")
+    result = find_max(input1)
     print(f"Expected: {expected_output}")
     print(f"Actual:   {result}")
     if result == expected_output:
