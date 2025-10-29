@@ -1,16 +1,14 @@
 def bubble_sort(nums):
-    print(f"Starting bubble sort on: {nums}")
-    swapping = True
-    end = len(nums)
-    while swapping:
-        swapping = False
-        for i in range(1, end):
-            if nums[i - 1] > nums[i]:
-                nums[i - 1], nums[i] = nums[i], nums[i - 1]
-                swapping = True
-        end -= 1
-    print(f"Sorted list: {nums}")
+    n = len(nums)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+                swapped = True
+        if not swapped:
+            break
     return nums
 
 
-bubble_sort([5, 7, 3, 6, 8])  # should return [3, 5, 6, 7, 8]
+print(bubble_sort([5, 7, 3, 6, 8]))  # Expected output: [3, 5, 6, 7, 8]

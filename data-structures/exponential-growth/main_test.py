@@ -1,26 +1,43 @@
-from main import bubble_sort
+from main import *
 
 run_cases = [
-    ([5, 7, 3, 6, 8], [3, 5, 6, 7, 8]),
-    ([2, 1], [1, 2]),
+    (10, 2, 4, [10, 20, 40, 80, 160]),
+    (0, 2, 2, [0, 0, 0]),
+    (20, 2, 6, [20, 40, 80, 160, 320, 640, 1280]),
 ]
 
 submit_cases = run_cases + [
-    ([], []),
-    ([1], [1]),
-    ([1, 5, -3, 2, 4], [-3, 1, 2, 4, 5]),
-    ([9, 8, 7, 6, 5, 4, 3, 2, 1], [1, 2, 3, 4, 5, 6, 7, 8, 9]),
-    ([1, 3, 2, 5, 4], [1, 2, 3, 4, 5]),
+    (30, 3, 3, [30, 90, 270, 810]),
+    (
+        40,
+        10,
+        10,
+        [
+            40,
+            400,
+            4000,
+            40000,
+            400000,
+            4000000,
+            40000000,
+            400000000,
+            4000000000,
+            40000000000,
+            400000000000,
+        ],
+    ),
+    (10, 5, 0, [10]),
+    (1, 1, 5, [1, 1, 1, 1, 1, 1]),
 ]
 
 
-def test(input1, expected_output):
-    print("---------------------------------")
-    print(f"Input:\n * {input1}")
-    print(f"Expected: {expected_output}")
-    result = bubble_sort(input1)
+def test(n, factor, days, expected):
+    print("-" * 40)
+    print(f"Inputs: \nn: {n}, factor: {factor}, days: {days}")
+    print(f"Expected: {expected}")
+    result = exponential_growth(n, factor, days)
     print(f"Actual:   {result}")
-    if result == expected_output:
+    if result == expected:
         print("Pass")
         return True
     print("Fail")
