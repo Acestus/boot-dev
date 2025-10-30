@@ -9,9 +9,13 @@ class Stack:
         return len(self.items)
 
     def peek(self):
-        if not self.items:
+        if len(self.items) == 0:
             return None
         return self.items[-1]
 
     def pop(self):
-        return self.items.pop() if self.items else None
+        if len(self.items) == 0:
+            return None
+        item = self.items[-1]
+        del self.items[-1]
+        return item
