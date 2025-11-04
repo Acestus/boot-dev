@@ -1,1 +1,2 @@
 kubectl version
+kubectl version
