@@ -62,5 +62,4 @@ status:
     type: Available
   observedGeneration: 4
   readyReplicas: 3
-  replicas: 3
   updatedReplicas: 3
