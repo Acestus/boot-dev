@@ -1,0 +1,11 @@
+# Boot dev Courses to take
+- [ ] Learn Data Structures and Algorithms in Python
+- [ ] Learn Data Structures and Algorithms in Python 2
+- [ ] Learn SQL
+- [ ] Learn Git 2
+- [ ] Learn Docker
+- [ ] Learn Go
+- [ ] Learn Typescript
+- [ ] Learn CICD with Github Actions, Docker and Typescript
+- [ ] Learn Functional Programming in Python
+- [ ] Learn Memory Management in C
