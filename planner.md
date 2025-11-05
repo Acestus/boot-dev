@@ -5,6 +5,7 @@
 - [ ] Learn Git 2
 - [ ] Learn Docker
 - [ ] Learn Go
+- [ ] Learn JavaScript
 - [ ] Learn Typescript
 - [ ] Learn CICD with Github Actions, Docker and Typescript
 - [ ] Learn Functional Programming in Python
