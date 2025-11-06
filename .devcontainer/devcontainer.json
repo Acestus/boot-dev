@@ -1,0 +1,52 @@
+{
+  "name": "Python Development",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.11",
+  
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      // Extensions to install automatically
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.isort"
+      ],
+      
+      // Settings for the workspace
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        }
+      }
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally
+  // "forwardPorts": [5000],
+
+  // Use 'postCreateCommand' to run commands after the container is created
+  "postCreateCommand": "pip install --upgrade pip && pip install pytest pytest-cov black flake8 isort",
+
+  // Configure tool-specific properties
+  "remoteUser": "vscode",
+  
+  // Keep container running
+  "overrideCommand": false,
+  
+  // Mount the workspace folder
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  
+  // Features to install
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}
