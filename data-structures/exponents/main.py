@@ -4,5 +4,5 @@ def get_estimated_spread(audiences_followers):
     average_followers = sum(audiences_followers) / len(audiences_followers)
     print(f"Average followers: {average_followers}")
     estimated_spread = average_followers * (len(audiences_followers) ** 1.2)
-    print(f"Estimated spread (before rounding): {estimated_spread}")
+    print(f"Estimated spread (before rounding): {estimated_s pread}")
     return estimated_spread

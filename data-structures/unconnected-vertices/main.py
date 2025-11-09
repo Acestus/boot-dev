@@ -1,12 +1,11 @@
 class Graph:
-    def adjacent_nodes(self, node):
-        graph = self.graph
-        if node in graph:
-            return graph[node]
-        else:
-            return {}
+    def unconnected_vertices(self):
+        unconnected = []
+        for node in self.graph:
+            if len(self.graph[node]) == 0:
+                unconnected.append(node)
+        return sorted(unconnected)
 
-    
     # don't touch below this line
 
     def __init__(self):
@@ -21,3 +20,7 @@ class Graph:
             self.graph[v].add(u)
         else:
             self.graph[v] = {u}
+
+    def add_node(self, u):
+        if u not in self.graph:
+            self.graph[u] = set()
